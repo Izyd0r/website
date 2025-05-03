@@ -1,15 +1,21 @@
+---
+import "../styles/global.css"
+import Waves from '../components/waves.astro';
+import About from '../components/about.astro';
+import Projects from '../components/projects.astro';
+import Footer from '../components/footer.astro';
+---
+
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} >
-    <title>Astro</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
   </head>
-  <body>
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <h1>Main page</h1>
+  <body class="bg-main text-white font-sans">
+    <Waves />
+    <About />
+    <Projects />
+    <Footer />
   </body>
 </html>
-
