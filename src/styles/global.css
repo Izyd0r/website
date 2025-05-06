@@ -1,7 +1,14 @@
 @import "tailwindcss";
 
+@tailwind base;
+@tailwind component;
+@tailwind utilities;
+
+@plugin "@tailwindcss/typography";
+
 @theme {
     --color-main: #2D2D2D;
     --color-second: #272727;
     --color-third: #202020;
 }
+

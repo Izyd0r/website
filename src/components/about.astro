@@ -1,17 +1,19 @@
-<section class="bg-main text-white lg:px-100 py-12 mt-50">
-  <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-6">
-    <div class="w-80 h-80 bg-gray-700 rounded-full mr-20" />
-    <div>
-      <h2 class="text-7xl mb-5">About me</h2>
-      <p class="text-big text-gray-300 max-w-md">
-        something something poor computer science student, ... Currently learning c#, python, unity.
-      </p>
-      <div class="text-3xl mt-4 mt-5">
-        <p>Contact:</p>
-        <div class="flex gap-2 mt-2">
-          <div class="w-8 h-8 bg-gray-400" /> <!-- Repeat for each icon -->
-        </div>
-      </div>
+---
+import { Content } from '../content/about.md'; 
+---
+<section class="bg-main text-white lg:px-20 xl:px-40 py-12 md:py-16 lg:py-20 mt-12 md:mt-16 px-4">
+  <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-12 lg:gap-16">
+
+    <div class="flex-shrink-0 w-48 h-48 sm:w-60 sm:h-60 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full bg-gray-700 shadow-lg mb-6 md:mb-0">
     </div>
+
+
+   <div class="text-center md:text-left w-full">
+      <article class="prose prose-invert lg:prose-lg max-w-none prose-headings:text-white prose-p:text-gray-300 prose-a:text-blue-400 hover:prose-a:text-blue-300">
+        <Content />
+      </article>
+    </div>
+
+
   </div>
 </section>
