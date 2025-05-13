@@ -1,7 +1,8 @@
 ---
 title: "Project name"
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+description: "First project"
 image: "/placeholder.png"
 ---
 
+Donec efficitur, urna eget consequat elementum, nisl odio suscipit augue, eu vehicula nisi dui vitae odio. Vestibulum ut tortor eu risus vestibulum mattis. Phasellus ut mi non sapien elementum tincidunt non a augue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin nec enim nec lacus malesuada blandit. Donec vitae accumsan urna. Vestibulum euismod arcu in laoreet sagittis. Nulla venenatis viverra ex, sed blandit quam blandit sed. 
 
