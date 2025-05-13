@@ -15,10 +15,21 @@ const projectsWithContent = await Promise.all(
   <h2 class="text-2xl mb-4">My side projects</h2>
   <div class="space-y-6">
     {projectsWithContent.map(({ data, Content }) => (
-      <div class="bg-second rounded-2xl p-6">
-        <img src={data.image} alt={data.title} class="w-16 h-16 bg-white rounded-md mb-2" />
-        <h3 class="text-xl mb-2">{data.title}</h3>
-        <Content />
+      <div class="flex bg-second rounded-2xl p-5">
+        <img
+          src={data.image}
+          alt={data.title}
+          class="flex-none bg-white rounded-md w-50 h-50 mr-10"
+        />
+        <div class="flex-one">
+          <h3 class="text-3xl mb-2">{data.title}</h3>
+          <Content />
+          <div class="flex justify-end">
+            <button class="bg-button hover:bg-third text-white font-bold py-2 px-4 rounded-md rounded-br-2xl">
+              Details
+            </button>
+          </div>
+        </div>
       </div>
     ))}
 
