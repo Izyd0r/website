@@ -4,6 +4,7 @@ import Waves from '../components/waves.astro';
 import About from '../components/about.astro';
 import Projects from '../components/projects.astro';
 import Footer from '../components/footer.astro';
+import Navbar from '../components/navbar.astro';
 ---
 
 <html lang="en">
@@ -12,10 +13,19 @@ import Footer from '../components/footer.astro';
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
   </head>
-  <body class="bg-main text-white font-sans">
-    <Waves />
-    <About />
-    <Projects />
-    <Footer />
+  <body class="bg-main text-white font-sans flex">
+    
+    <!-- Sticky left-side navbar -->
+    <Navbar />
+
+    <!-- Main content with left padding to avoid overlapping -->
+    <main class="flex-1">
+      <Waves id="top" />
+      <section id="about"><About /></section>
+      <section id="projects"><Projects /></section>
+      <section id="footer"><Footer /></section>
+    </main>
+
   </body>
 </html>
+

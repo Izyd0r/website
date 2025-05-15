@@ -8,8 +8,31 @@
 
 @theme {
     --color-main: #2D2D2D;
-    --color-second: #242424;
-    --color-third: #202020;
-    --color-button: #454545;
+    --color-second: #343434;
+    --color-third: #3A3A3A;
+    --color-button: #383838;
+    --color-accent: #C4F1BE;
+}
+
+.custom-underline::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 0;
+  background-color: var(--color-accent); 
+  transition: width 0.3s ease;
+  border-radius: 2px 2px 0 0;
+}
+
+.custom-underline:hover::after {
+  width: 100%;
+}
+
+nav a.active {
+  background-color: var(--color-button);
+  color: var(--color-accent);
+  border-bottom: 4px solid var(--color-accent);
 }
 
