@@ -11,22 +11,35 @@ const projectsWithContent = await Promise.all(
   })
 );
 ---
-
 <section class="bg-main text-white lg:px-100 py-12 component-block my-80">
-    <SectionTitle title="My Side Projects" />
-    <div class="space-y-6">
+  <SectionTitle title="My Side Projects" />
+
+  <div class="space-y-6">
     {projectsWithContent.map(({ data, Content }) => (
-      <div class="flex bg-second rounded-2xl p-5">
+      <div class="flex bg-third rounded-t-2xl p-5 items-stretch border-b-3 border-(--color-main)">
         <img
           src={data.image}
           alt={data.title}
-          class="flex-none bg-white rounded-md w-50 h-50 mr-10"
+          class="flex-none bg-white rounded-md w-50 h-50 mr-10 object-cover"
         />
-        <div class="flex-one">
+
+        <div class="flex flex-col justify-between flex-1">
           <h3 class="text-3xl mb-2">{data.title}</h3>
           <Content />
-          <div class="flex justify-end">
-            <button class="bg-button hover:bg-third text-white font-bold py-2 px-4 rounded-md rounded-br-2xl">
+
+          <div class="mt-auto flex justify-between items-center pt-4">
+              <div class="flex flex-wrap gap-2">
+                  <span class="font-semibold mr-2">Stack:</span>
+                  {(data.stack ?? []).map((tech) => (
+                <span class="bg-second text-sm text-white px-2 py-1 rounded-md">
+                  {tech}
+                </span>
+              ))}
+            </div>
+            <button 
+              class="relative inline-block bg-second text-white font-bold py-2 px-4 rounded 
+                     hover:bg-button hover:text-accent transition-colors duration-300 
+                     overflow-hidden custom-underline">
               Details
             </button>
           </div>
@@ -34,7 +47,7 @@ const projectsWithContent = await Promise.all(
       </div>
     ))}
 
-    <div class="bg-second rounded-2xl p-6 text-center text-gray-400">
+    <div class="bg-third rounded-2xl p-6 text-center text-gray-400">
       Cooking Something Up...
     </div>
   </div>
