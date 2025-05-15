@@ -1,12 +1,10 @@
 ---
 import { Content } from '../content/about.md'; 
+import SectionTitle from './section-title.astro';
 ---
 <section class="bg-main text-white component-block my-80">
-    <div>
-        <p class="component-title">About me</p>
-        <hr class="mb-10 h-0.5 w-1/4 border-t-0 bg-accent h-1" />
-    </div>
-  <div class="my-20 pl-10 max-w-5xl flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-16">
+    <SectionTitle title="About me" />
+    <div class="my-20 pl-10 max-w-5xl flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-16">
     <div class="flex-shrink-0 w-48 h-48 sm:w-60 sm:h-60 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full bg-accent shadow-lg mb-6 md:mb-0">
     </div>
 
