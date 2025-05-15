@@ -36,3 +36,7 @@ nav a.active {
   border-bottom: 4px solid var(--color-accent);
 }
 
+.component-block {
+    @apply rounded-4xl shadow-xl/30 bg-second
+    my-6 mr-6 ml-0
+}
