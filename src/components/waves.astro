@@ -1,12 +1,60 @@
-<section class="text-black relative h-[95vh] overflow-hidden component-block my-6">
-  <!-- Background SVG filling entire section -->
+<section id="top" class="text-black relative h-[95vh] overflow-hidden component-block my-6">
   <div class="absolute inset-0 bg-[url('../public/waves.svg')] bg-cover bg-no-repeat bg-center z-0"></div>
-
-  <!-- Text over the background -->
-  <div class="relative z-10 flex flex-col items-center justify-center h-full">
-    <h1 class="text-4xl font-light mb-2">Code that speaks.</h1>
-    <h1 class="text-4xl font-light mb-2">Projects that work.</h1>
-    <h1 class="text-4xl font-light">Welcome to my dev world.</h1>
+  <div class="relative z-10 flex flex-col justify-center h-full text-left p-10">
+    <div class="space-y-2 leading-none">
+      <span class="block text-4xl font-sans">Hi, my name is</span>
+      <span class="block text-[175px] font-heading -indent-3">Name Surname.</span>
+      <span class="block text-6xl font-sans">
+        <span id="typing-text"></span><span class="cursor"></span>
+      </span>
+    </div>
   </div>
 </section>
 
+<script>
+    const texts = [
+  "Welcome to my dev world.",
+  "I build amazing websites.",
+  "Let's create something cool!"
+];
+
+const typingText = document.getElementById('typing-text');
+let currentTextIndex = 0;
+let currentCharIndex = 0;
+let deleting = false;
+const typingSpeed = 100;
+const deletingSpeed = 50;
+const delayAfterTyping = 2000;
+const delayAfterDeleting = 500;
+
+function type() {
+  const currentText = texts[currentTextIndex];
+
+  if (!deleting) {
+    typingText.textContent = currentText.slice(0, currentCharIndex + 1);
+    currentCharIndex++;
+
+    if (currentCharIndex === currentText.length) {
+      setTimeout(() => {
+        deleting = true;
+        type();
+      }, delayAfterTyping);
+    } else {
+      setTimeout(type, typingSpeed);
+    }
+  } else {
+    typingText.textContent = currentText.slice(0, currentCharIndex - 1);
+    currentCharIndex--;
+
+    if (currentCharIndex === 0) {
+      deleting = false;
+      currentTextIndex = (currentTextIndex + 1) % texts.length;
+      setTimeout(type, delayAfterDeleting);
+    } else {
+      setTimeout(type, deletingSpeed);
+    }
+  }
+}
+
+type();
+</script>
