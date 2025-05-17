@@ -1,33 +1,30 @@
 ---
-import "../styles/global.css"
-import Waves from '../components/waves.astro';
-import About from '../components/about.astro';
-import Projects from '../components/projects.astro';
-import Footer from '../components/footer.astro';
-import Navbar from '../components/navbar.astro';
-import Contact from '../components/contact.astro';
+import "../styles/global.css";
+import Waves from "../components/waves.astro";
+import About from "../components/about.astro";
+import Projects from "../components/projects.astro";
+import Footer from "../components/footer.astro";
+import Navbar from "../components/navbar.astro";
+import Contact from "../components/contact.astro";
 ---
 
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-  </head>
-  <body class="bg-main text-white font-sans">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>My Portfolio</title>
+    </head>
+    <body class="bg-main text-white font-sans">
+        <div class="flex">
+            <Navbar />
 
-      <div class="flex">
-    <Navbar />
-
-    <main class="flex-1">
-      <Waves id="top" />
-      <section id="about"><About /></section>
-      <section id="projects"><Projects /></section>
-      <section id="contact"><Contact /></section>
-    </main>
-      </div>
-      <section class="block" id="footer"><Footer /></section>
-
-  </body>
+            <main class="flex-1">
+                <Waves />
+                <About />
+                <Projects />
+                <Contact />
+            </main>
+        </div>
+        <Footer />
+    </body>
 </html>
-

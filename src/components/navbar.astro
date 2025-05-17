@@ -90,14 +90,12 @@
         const navLinks = document.querySelectorAll("nav a");
 
         function onScroll() {
-            const scrollPos = window.scrollY + 100;
-
             sections.forEach((section) => {
-                const top = section.offsetTop;
-                const bottom = top + section.offsetHeight;
                 const id = section.getAttribute("id");
+                const offset = section.getBoundingClientRect();
+                const scrollPos = window.innerHeight / 2;
 
-                if (scrollPos >= top && scrollPos < bottom) {
+                if (scrollPos >= offset.top && scrollPos < offset.bottom) {
                     navLinks.forEach((link) => {
                         link.classList.toggle(
                             "active",
