@@ -38,7 +38,6 @@
 
         <nav class="flex flex-col space-y-4">
             <a
-                id="top"
                 href="#top"
                 class="relative inline-block bg-second text-white font-bold py-2 px-4 rounded
           hover:bg-button hover:text-accent transition-colors duration-300
@@ -49,7 +48,6 @@
                 Top
             </a>
             <a
-                id="about"
                 href="#about"
                 class="relative inline-block bg-second text-white font-bold py-2 px-4 rounded
           hover:bg-button hover:text-accent transition-colors duration-300
@@ -60,7 +58,6 @@
                 About
             </a>
             <a
-                id="projects"
                 href="#projects"
                 class="relative inline-block bg-second text-white font-bold py-2 px-4 rounded
           hover:bg-button hover:text-accent transition-colors duration-300
@@ -71,7 +68,6 @@
                 Side Projects
             </a>
             <a
-                id="contact"
                 href="#contact"
                 class="relative inline-block bg-second text-white font-bold py-2 px-4 rounded
           hover:bg-button hover:text-accent transition-colors duration-300
@@ -97,10 +93,9 @@
 
                 if (scrollPos >= offset.top && scrollPos < offset.bottom) {
                     navLinks.forEach((link) => {
-                        link.classList.toggle(
-                            "active",
-                            link.getAttribute("href") === `#${id}`,
-                        );
+                        const isActive = link.getAttribute("href") === `#${id}`;
+                        link.classList.toggle("active", isActive);
+                        link.classList.toggle("pointer-events-none", isActive);
                     });
                 }
             });
