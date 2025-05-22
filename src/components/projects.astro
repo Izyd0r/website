@@ -42,13 +42,14 @@ const projectsWithContent = await Promise.all(
                                     </span>
                                 ))}
                             </div>
-                            <button
+                            <a
                                 class="font-heading relative inline-block bg-second text-white font-semibold py-2 px-4 rounded 
                      hover:bg-button hover:text-accent transition-colors duration-300 
                      overflow-hidden custom-underline"
-                            >
+                                href={data.link}
+                                >
                                 Details
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
