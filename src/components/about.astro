@@ -9,17 +9,16 @@ import SectionTitle from "./section-title.astro";
 >
     <SectionTitle title="About me" />
     <div
-        class="my-20 pl-10 max-w-5xl flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-16"
+        class="my-20 pl-10 max-w-7xl flex items-start flex-col md:flex-row gap-8 md:gap-12 lg:gap-16"
     >
         <div
             class="flex-shrink-0 w-48 h-48 sm:w-60 sm:h-60 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full bg-accent shadow-lg mb-6 md:mb-0"
         >
         </div>
-
-        <div class="text-center md:text-left w-full">
-            <article class="prose lg:prose-lg prose-invert max-w-none">
-                <Content />
-            </article>
-        </div>
+        <article
+            class="prose lg:prose-lg prose-invert prose-p:my-0 prose-p:leading-relaxed max-w-none mt-0 flex-grow"
+        >
+            <Content />
+        </article>
     </div>
 </section>
