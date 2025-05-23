@@ -1,12 +1,13 @@
 ---
 import { Icon } from "astro-icon/components";
 ---
+
 <footer class="bg-second text-white px-6 py-8 mt-100">
     <div
         class="max-w-6xl mx-auto flex flex-col md:flex-row items-start justify-between gap-8 text-sm"
     >
         <div class="space-y-2">
-            <p class="text-[25px] font-bold font-heading mb-7">Portfolio</p> 
+            <p class="text-[25px] font-bold font-heading mb-7">Portfolio</p>
             <a href="https://lordicon.com/">Icons by Lordicon.com</a>
             <p class="text-[15px] mt-4">
                 © 2025 Name Surname. All rights reserved.
@@ -20,7 +21,8 @@ import { Icon } from "astro-icon/components";
                     <a
                         href="#about"
                         class="text-[15px] hover:underline hover:text-accent"
-                        >About me</a>
+                        >About me</a
+                    >
                 </li>
                 <li>
                     <a
@@ -35,9 +37,16 @@ import { Icon } from "astro-icon/components";
         <div class="space-y-2">
             <p class="text-[25px] font-bold font-heading mb-7">Contact</p>
             <div class="flex gap-2">
-                <Icon name="linkedin1" size="5rem" />
-                <Icon name="github1" size="5rem" />
-                <Icon name="email1" size="5rem" />
+                <!-- Change these links to yours -->
+                <a href="https://linkedin.com"
+                    ><Icon name="linkedin1" size="5rem" /></a
+                >
+                <a href="https://github.com"
+                    ><Icon name="github1" size="5rem" /></a
+                >
+                <a href="mailto:your_email@example.com"
+                    ><Icon name="email1" size="5rem" /></a
+                >
             </div>
         </div>
     </div>
