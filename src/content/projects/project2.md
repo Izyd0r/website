@@ -1,7 +1,7 @@
 ---
 title: "Project name"
 description: "Second project"
-image: "/placeholder.png"
+image: "https://source.unsplash.com/random/400x400?code"
 link: "second.project.page"
 ---
 

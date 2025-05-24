@@ -8,8 +8,15 @@ import { Icon } from "astro-icon/components";
     >
         <div class="flex justify-center mb-6">
             <div
-                class="flex-shrink-0 w-10 h-10 sm:w-30 sm:h-30 md:w-42 md:h-42 lg:w-50 lg:h-50 rounded-full bg-accent shadow-lg mb-6 md:mb-0"
+               class="relative flex-shrink-0 w-10 h-10 sm:w-20 sm:h-20 md:w-32 md:h-32 lg:w-40 lg:h-40 rounded-full overflow-hidden shadow-lg mb-6 md:mb-0 bg-accent" 
             >
+                <!-- Your image should go here -->
+                <img 
+                    src="https://source.unsplash.com/random/400x400?portrait"
+                    alt="Profile" 
+                    class="object-cover w-full h-full"
+                    onerror="this.style.display='none'; this.parentElement.classList.add('bg-accent');"
+                />
             </div>
         </div>
         <div class="block text-center mb-4">
